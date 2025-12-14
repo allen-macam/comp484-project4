@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSUN Map Challenge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="page">
+    <section class="panel">
+      <header class="panel__header">
+        <p class="eyebrow">CSUN Geography Quiz</p>
+        <h1>Find the spot, fast.</h1>
+        <p class="lede">Double-click the CSUN map where you think each prompt lives. Five prompts, one map, no panning allowed.</p>
+      </header>
+
+      <div class="stats">
+        <div class="stat">
+          <span class="label">Prompt</span>
+          <span class="value" id="prompt-count">0 / 5</span>
+        </div>
+
+        <div class="stat">
+          <span class="label">Correct</span>
+          <span class="value" id="score">0</span>
+        </div>
+
+        <div class="stat">
+          <span class="label">Timer</span>
+          <span class="value" id="timer">00:00</span>
+        </div>
+
+        <div class="stat">
+          <span class="label">Best Time</span>
+          <span class="value" id="best-time">--</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <p class="card__label">Your current target</p>
+        <p class="card__title" id="prompt-text">Loading map…</p>
+        <p class="card__hint">Double-click inside the map to submit your guess. Panning and zooming are locked.</p>
+      </div>
+
+      <div class="actions">
+        <button id="restart" type="button">Restart Game</button>
+      </div>
+
+      <div class="notes">
+        <p>Rules:</p>
+        <ul>
+          <li>Five locations total.</li>
+          <li>You get feedback after every guess. Correct areas flash green, incorrect red.</li>
+          <li>After five prompts, your total score appears here.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="map-wrap">
+      <div id="map" aria-label="CSUN map"></div>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+  <!-- Replace YOUR_API_KEY_HERE with a valid browser key that has Maps JavaScript API enabled. -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfYZj5K-29wGxx9BF8Ixwg7eJYkX-TCQk&libraries=geometry&callback=initMap"></script>
+</body>
+</html>
