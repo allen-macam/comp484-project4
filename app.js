@@ -24,7 +24,7 @@ const LOCATIONS =
 [
   {
     name: 'University Library',
-    prompt: 'Double-click where the University Library sits.',
+    prompt: 'Find the University Library.',
     polygon: [
       { lat: 34.24045, lng: -118.53005 }, // top-left edge of library footprint
       { lat: 34.24045, lng: -118.52860 }, // top-right edge
@@ -44,7 +44,7 @@ const LOCATIONS =
   },
   {
     name: 'Student Recreation Center',
-    prompt: 'Locate the Student Recreation Center.',
+    prompt: 'Find the Student Recreation Center.',
     polygon: [
       { lat: 34.24065, lng: -118.52515 }, // top-left edge of SRC
       { lat: 34.24065, lng: -118.52470 }, // top-right edge
@@ -54,7 +54,7 @@ const LOCATIONS =
   },
   {
     name: 'Manzanita Hall',
-    prompt: 'Spot Manzanita Hall.',
+    prompt: 'Find Manzanita Hall.',
     polygon: [
       { lat: 34.23785, lng: -118.53150 }, // top-left corner of Manzanita
       { lat: 34.23785, lng: -118.53090 }, // top-right corner
